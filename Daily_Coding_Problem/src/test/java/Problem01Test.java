@@ -86,6 +86,78 @@ public class Problem01Test {
 		assertThat(result[0][3]).isEqualTo(17);
 	}
 	
+	/**
+	 * This is the expected Matrix
+	 * 
+	 * 		-1			25			13			17
+	 *  	25			-1			18			22
+	 *  	13			18			-1			10
+	 *  	17			22			10			-1
+	 *  
+	 */
+	@Test
+	public void test_generateSumMatrix_OriginalScenario_secondRow() {
+		// Arrange
+		List<Integer> list	= getOriginalExampleList();
+		
+		// Act
+		int[][] result		= this.aProblem.generateSumMatrix(list);
+		
+		// Assert
+		assertThat(result[1][0]).isEqualTo(25);
+		assertThat(result[1][1]).isEqualTo(-1);
+		assertThat(result[1][2]).isEqualTo(18);
+		assertThat(result[1][3]).isEqualTo(22);
+	}
+	
+	/**
+	 * This is the expected Matrix
+	 * 
+	 * 		-1			25			13			17
+	 *  	25			-1			18			22
+	 *  	13			18			-1			10
+	 *  	17			22			10			-1
+	 *  
+	 */
+	@Test
+	public void test_generateSumMatrix_OriginalScenario_thirdRow() {
+		// Arrange
+		List<Integer> list	= getOriginalExampleList();
+		
+		// Act
+		int[][] result		= this.aProblem.generateSumMatrix(list);
+		
+		// Assert
+		assertThat(result[2][0]).isEqualTo(13);
+		assertThat(result[2][1]).isEqualTo(18);
+		assertThat(result[2][2]).isEqualTo(-1);
+		assertThat(result[2][3]).isEqualTo(10);
+	}
+	
+	/**
+	 * This is the expected Matrix
+	 * 
+	 * 		-1			25			13			17
+	 *  	25			-1			18			22
+	 *  	13			18			-1			10
+	 *  	17			22			10			-1
+	 *  
+	 */
+	@Test
+	public void test_generateSumMatrix_OriginalScenario_forthRow() {
+		// Arrange
+		List<Integer> list	= getOriginalExampleList();
+		
+		// Act
+		int[][] result		= this.aProblem.generateSumMatrix(list);
+		
+		// Assert
+		assertThat(result[3][0]).isEqualTo(17);
+		assertThat(result[3][1]).isEqualTo(22);
+		assertThat(result[3][2]).isEqualTo(10);
+		assertThat(result[3][3]).isEqualTo(-1);
+	}
+	
 	private List<Integer> getOriginalExampleList() {
 		List<Integer>	list	=	Arrays.asList(10, 15, 3, 7);
 		return list;
