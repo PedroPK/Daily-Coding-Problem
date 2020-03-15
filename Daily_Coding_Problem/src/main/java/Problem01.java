@@ -20,10 +20,10 @@ public class Problem01 implements IProblem01 {
 				
 				// To avoid sum a list element to itself
 				if ( row == col ) {
-					continue;
+					matrix[row][col]	=	-1;
+				} else {
+					matrix[row][col]	=	pList.get(row)		+		pList.get(col);
 				}
-				
-				matrix[row][col]	=	pList.get(row)		+		pList.get(col);
 			}
 		}
 		return matrix;
